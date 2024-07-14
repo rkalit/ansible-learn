@@ -1,0 +1,10 @@
+---
+- name: Setting up server
+  hosts: nomad_server
+  become: true
+  vars:
+    ansible_user: rkalit
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa
+  
+  roles:
+    - users
